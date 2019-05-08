@@ -268,7 +268,7 @@ export class Header {
         /**
          * Add Placeholder
          */
-        tag.dataset.placeholder = this._settings.placeholder || '';
+        tag.dataset.placeholder = this._settings && this._settings.placeholder || '';
         return tag;
     }
     /**
@@ -282,4 +282,3 @@ export class Header {
         return level;
     }
 }
-//# sourceMappingURL=index.js.map
