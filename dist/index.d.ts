@@ -1,4 +1,4 @@
-import { API, HTMLPasteEvent, PasteConfig, ToolboxConfig, ToolSettings } from '@editorjs/editorjs';
+import { API, BlockTool, HTMLPasteEvent, PasteConfig, ToolboxConfig, ToolSettings } from '@editorjs/editorjs';
 interface HeaderConfig extends ToolSettings {
     placeholder?: string;
 }
@@ -12,13 +12,13 @@ interface HeaderData {
 }
 interface HeaderConstructorConfig {
     api: API;
-    config: HeaderConfig;
-    data: HeaderInputData;
+    config?: HeaderConfig;
+    data?: HeaderInputData;
 }
-export declare class Header {
+export declare class Header implements BlockTool {
     private api;
     private _CSS;
-    private _settings;
+    private _settings?;
     private _data;
     private _element;
     private settingsButtons;
