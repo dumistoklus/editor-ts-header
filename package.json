@@ -1,32 +1,27 @@
 {
-  "name": "@editorjs/header",
+  "name": "@dumistoklus/editor-ts-header",
   "version": "2.2.3",
   "keywords": [
     "codex editor",
     "header",
     "tool",
     "editor.js",
-    "editorjs"
+    "editorjs",
+    "editorts"
   ],
   "description": "Header Tool for Editor.js",
   "license": "MIT",
   "repository": "https://github.com/editor-js/header",
   "main": "./dist/bundle.js",
   "scripts": {
-    "build": "webpack --mode production",
-    "build:dev": "webpack --mode development --watch"
+    "build": "tsc"
   },
   "author": {
     "name": "CodeX Team",
     "email": "team@ifmo.su"
   },
   "devDependencies": {
-    "@babel/core": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
-    "babel-loader": "^8.0.5",
-    "css-loader": "^1.0.0",
-    "style-loader": "^0.21.0",
-    "webpack": "^4.29.5",
-    "webpack-cli": "^3.2.3"
+    "@editorjs/editorjs": "^2.13.0",
+    "typescript": "3.4.5"
   }
 }
