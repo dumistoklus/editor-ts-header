@@ -12,9 +12,9 @@
   "description": "Header Tool for Editor.js",
   "license": "MIT",
   "repository": "https://github.com/editor-js/header",
-  "main": "./src/index.ts",
+  "main": "./src/index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc --declaration"
   },
   "author": {
     "name": "CodeX Team",
