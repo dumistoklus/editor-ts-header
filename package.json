@@ -12,7 +12,8 @@
   "description": "Header Tool for Editor.js",
   "license": "MIT",
   "repository": "https://github.com/editor-js/header",
-  "main": "./src/index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc --declaration"
   },
