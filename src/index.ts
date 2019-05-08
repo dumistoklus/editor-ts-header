@@ -1,4 +1,4 @@
-import {API, HTMLPasteEvent, PasteConfig, ToolboxConfig, ToolSettings} from '@editorjs/editorjs';
+import {API, BlockTool, HTMLPasteEvent, PasteConfig, ToolboxConfig, ToolSettings} from '@editorjs/editorjs';
 
 interface HeaderCss {
     block: string;
@@ -29,8 +29,8 @@ interface HeaderLevel {
 
 interface HeaderConstructorConfig {
     api: API;
-    config: HeaderConfig;
-    data: HeaderInputData;
+    config?: HeaderConfig;
+    data?: HeaderInputData;
 }
 
 const levels: HeaderLevel[] = [
@@ -69,13 +69,13 @@ const levels: HeaderLevel[] = [
 // Use H2 as default header
 const defaultLevel = levels[1];
 
-export class Header {
+export class Header implements BlockTool {
 
     private api: API;
 
     private _CSS: HeaderCss;
 
-    private _settings: HeaderConfig;
+    private _settings?: HeaderConfig;
 
     private _data: HeaderData;
 
@@ -358,7 +358,7 @@ export class Header {
         /**
          * Add Placeholder
          */
-        tag.dataset.placeholder = this._settings.placeholder || '';
+        tag.dataset.placeholder = this._settings && this._settings.placeholder || '';
 
         return tag;
     }
